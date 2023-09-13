@@ -3,7 +3,10 @@ import DateIcon from '../icons/date-icon';
 import LogisticsItem from './logistics-item';
 import classes from './event-logistics.module.css';
 
+
+
 function EventLogistics(props) {
+  console.log(props.address)
   const { date, address, image, imageAlt } = props;
 
   const humanReadableDate = new Date(date).toLocaleDateString('en-US', {
@@ -11,7 +14,8 @@ function EventLogistics(props) {
     month: 'long',
     year: 'numeric',
   });
-  const addressText = address.replace(', ', '\n');
+
+  const addressText = address ? address.replace(', ', '\n') : 'Address not available';
 
   return (
     <section className={classes.logistics}>

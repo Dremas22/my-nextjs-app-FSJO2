@@ -14,7 +14,7 @@ function EventItem(props) {
         year: "numeric"
     });
 
-    const formatAddress = location.replace(',', '\n'); 
+    const formatAddress = location ? location.replace(',', '\n') : 'Location not available'; 
     const exploreLink = `/events/${id}`;
 
     return (
