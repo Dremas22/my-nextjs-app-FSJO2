@@ -31,7 +31,7 @@ function Comments(props) {
       method: 'POST',
       body: JSON.stringify(commentData),
       headers: {
-        'Content-Type': 'application.json()'
+        'Content-Type': 'application/json'
       }
     })
       .then((response) => response.json())

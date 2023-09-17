@@ -15,16 +15,15 @@ function NewsletterRegistration() {
       method: 'POST',
       body: JSON.stringify({ email: enteredEmail }),
       headers: {
-        'Content-Type': 'application.json'
-      }
+        'Content-Type': 'application/json',
+      },
     })
       .then((response) => response.json())
-      .then((data) => console.log(data))
+      .then((data) => console.log(data));
       
     
   }
   
-
   return (
     <section className={classes.newsletter}>
       <h2>Sign up to stay updated!</h2>

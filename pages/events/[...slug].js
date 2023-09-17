@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 //import useSWR from 'swr';
 import axios from 'axios'
 
-import { getFilteredEvents } from '../../helpers/api-util';
+//import { getFilteredEvents } from '../../helpers/api-util';
 import EventList from '../../components/events/event-list';
 import ResultsTitle from '../../components/events/results-title';
 import Button from '../../components/ui/button';
@@ -95,6 +95,7 @@ function FilteredEventsPage() {
     );
   }
   const filteredEvents = loadedEvents.filter((event) => {
+    
     const eventDate = new Date(event.date);
     return (
       eventDate.getFullYear() === numYear &&
